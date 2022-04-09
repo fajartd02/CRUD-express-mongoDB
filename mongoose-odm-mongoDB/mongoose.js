@@ -12,16 +12,20 @@ async function main() {
     await mongoose.connect('mongodb://localhost:27017/userDB');
 
     // Create
-    const car = new Car({name: "Lamborghini"});
-    car.save((err, result) => {
-        if(err) {
-            return console.log(err);
-        } else {
-            console.log(result);
-        }
-    })
+    // const car = new Car({name: "Lamborghini"});
+    // car.save((err, result) => {
+    //     if(err) {
+    //         return console.log(err);
+    //     } else {
+    //         console.log(result);
+    //     }
+    // })
 
+    // Get All
+    const cars = await Car.find();
+    console.log(cars);
 
+    
 }
 
 
