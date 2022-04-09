@@ -21,11 +21,13 @@ async function main() {
     //     }
     // })
 
-    // Get All
-    const cars = await Car.find();
-    console.log(cars);
+    // // Get All
+    // const cars = await Car.find();
+    // console.log(cars);
 
-    
+    // Get Specific ID ALL
+    const cars = await Car.find({_id: '6251474999500ff0c16be759'});
+    console.log(cars);
 }
 
 
